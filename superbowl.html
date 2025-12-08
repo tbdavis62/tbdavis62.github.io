@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patriots Super Bowl LXI Champions</title>
+<link rel="stylesheet" href="DMstyle.css">
+</head>
+<body>
+
+<nav id="main-nav">
+    <a href="introtodrake.html" id="nav-intro">Introduction</a> |
+    <a href="picturesofdrake.html" id="nav-gallery">Photo Gallery</a> |
+    <a href="drakebetter.html" id="nav-best-qb">Why He's the Best</a> |
+    <a href="drakemayestats.html" id="nav-stats">2025 Stats</a> |
+    <a href="superbowl.html" id="nav-superbowl">Super Bowl Bound</a>
+</nav>
+<hr>
+    <h1>The Destiny: Patriots Win the Super Bowl!</h1>
+
+<p id="feedback-message" style="color: #FF6600; font-size: large; font-weight: bold;"></p>
+
+<form id="prediction-form">
+    <h2>Super Bowl LXI Prediction Poll</h2>
+    
+    <label for="fan-name">Your Name:</label>
+    <input type="text" id="fan-name" oninput="checkNameLength()" required> 
+    <p id="name-length-display" style="font-size: small; color: #B0B7BC;"></p><br>
+
+    <p>Do you predict a Super Bowl win in 2025?</p>
+    <input type="radio" id="predict-yes" name="prediction" value="Yes" required>
+    <label for="predict-yes">Yes, a Super Bowl win is certain!</label><br>
+    <input type="radio" id="predict-no" name="prediction" value="No">
+    <label for="predict-no">Not yet, but we'll make the playoffs.</label><br><br>
+
+    <p>What did you like about this fan site? (Check all that apply)</p>
+    <input type="checkbox" id="check-stats" value="stats">
+    <label for="check-stats">The 2025 Stats</label><br>
+    <input type="checkbox" id="check-qb" value="best-qb">
+    <label for="check-qb">The 'Best QB Ever' Argument</label><br><br>
+
+    <button type="submit" onclick="submitForm(event)">Submit Prediction</button>
+    
+    <button type="reset" onclick="resetMessage()">Clear Form</button> 
+</form>
+
+<hr>
+
+
+<script>
+    // --- Existing JS for Active Link (if-then-else requirement) ---
+    const pageTitle = document.title;
+    
+    // ... all your existing if-then-else blocks go here to set the active-page class ...
+    if (pageTitle.includes("Intro")) {
+        const link = document.getElementById('nav-intro');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    else if (pageTitle.includes("Gallery")) {
+        const link = document.getElementById('nav-gallery');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    else if (pageTitle.includes("Best QB Ever")) {
+        const link = document.getElementById('nav-best-qb');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    else if (pageTitle.includes("Stats")) {
+        const link = document.getElementById('nav-stats');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    else if (pageTitle.includes("Super Bowl")) {
+        const link = document.getElementById('nav-superbowl');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    
+
+
+    
+    function checkNameLength() {
+        const nameInput = document.getElementById('fan-name').value;
+        const display = document.getElementById('name-length-display');
+        
+        
+        display.innerHTML = `Characters typed: ${nameInput.length}`; 
+    }
+
+    
+    function submitForm(event) {
+        event.preventDefault(); 
+        
+       
+        const name = document.getElementById('fan-name').value;
+        const messageElement = document.getElementById('feedback-message');
+        
+        
+        if (name === "") {
+           
+            messageElement.innerHTML = "🚫 Please enter your name to submit your prediction.";
+        } else {
+           
+            messageElement.innerHTML = `**Thank you, ${name}!** Your prediction has been recorded. Go Patriots!`;
+        }
+    }
+    
+   
+    function resetMessage() {
+        document.getElementById('feedback-message').innerHTML = "";
+        document.getElementById('name-length-display').innerHTML = "";
+    }
+</script>
+
+</body>
+</html>

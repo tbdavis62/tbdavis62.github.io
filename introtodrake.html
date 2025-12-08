@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro to Drake Maye</title>
+<link rel="stylesheet" href="DMstyle.css">
+</head>
+<body>
+
+
+<nav id="main-nav">
+    <a href="introtodrake.html" id="nav-intro">Introduction</a> |
+    <a href="picturesofdrake.html" id="nav-gallery">Photo Gallery</a> |
+    <a href="drakebetter.html" id="nav-best-qb">Why He's the Best</a> |
+    <a href="drakemayestats.html" id="nav-stats">2025 Stats</a> |
+    <a href="superbowl.html" id="nav-superbowl">Super Bowl Bound</a>
+</nav>
+<hr>
+
+<h1>Drake Maye: Quarterback Introduction</h1>
+
+<p>
+    Welcome to an introduction page about Drake Maye, the promising young quarterback.
+    He played college football for the North Carolina Tar Heels and was a sought after prospect
+    in the NFL Draft.
+</p>
+
+<img src="DMpic1.jpeg" alt="Drake Maye in his football uniform" width="400">
+
+
+<h2>College Career Highlights</h2>
+<p>
+    Maye had an incredible run at UNC, showcasing his strong arm and mobility.
+    He became known for his accurate passing and ability to extend plays outside the pocket.
+</p>
+
+<h3>Key Statistics (UNC)</h3>
+<ul>
+    <li>Passing Yards: Over 8,000</li>
+    <li>Passing Touchdowns: Over 60</li>
+    <li>Key Award: 2022 ACC Player of the Year</li>
+</ul>
+
+<hr>
+
+<h2 id="facts">Fun Facts About Drake Maye</h2>
+<p>
+    The Maye family has a deep history in UNC sports. Drake's father, Mark Maye, played quarterback for the Tar Heels,
+    and his brothers also excelled in basketball.
+</p>
+
+<a href="https://www.espn.com/nfl/player/_/id/4844331/drake-maye" target="_blank">
+    <button>Check out Drake Maye's Stats on ESPN</button>
+</a>
+
+
+
+<script>
+   
+    const pageTitle = document.title;
+    
+   
+    if (pageTitle.includes("Intro")) {
+        const link = document.getElementById('nav-intro');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    
+    else if (pageTitle.includes("Gallery")) {
+        const link = document.getElementById('nav-gallery');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    
+    else if (pageTitle.includes("Best QB Ever")) {
+        const link = document.getElementById('nav-best-qb');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+    
+    else if (pageTitle.includes("Stats")) {
+        const link = document.getElementById('nav-stats');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+   
+    else if (pageTitle.includes("Super Bowl")) {
+        const link = document.getElementById('nav-superbowl');
+        if (link) {
+            link.classList.add('active-page');
+        }
+    } 
+</script>
+
+</body>
+</html>
