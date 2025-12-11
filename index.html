@@ -3,57 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drake Maye Photo Gallery</title>
+<title>Intro to Drake Maye</title>
 <link rel="icon" href="Patslogo.png">
-
 <link rel="stylesheet" href="DMstyle.css">
+
 </head>
 <body>
 
 
-
 <nav id="main-nav">
-    <a href="index.html" id="nav-intro">Introduction</a> |
-    <a href="picturesofdrake.html" id="nav-gallery">Photo Gallery</a> |
+    <a href="introtodrake.html" id="nav-intro">Introduction</a> |
+    <a href="index.html" id="nav-gallery">Photo Gallery</a> |
     <a href="drakebetter.html" id="nav-best-qb">Why He's the Best</a> |
     <a href="drakemayestats.html" id="nav-stats">2025 Stats</a> |
     <a href="superbowl.html" id="nav-superbowl">Super Bowl Bound</a>
 </nav>
 <hr>
-    <h1>Drake Maye Photo Gallery</h1>
+
+<h1>Drake Maye: Quarterback Introduction</h1>
+
 <p>
-    A collection of pictures showcasing Drake Maye on and off the field.
+    Welcome to an introduction page about Drake Maye, the promising young quarterback.
+    He played college football for the North Carolina Tar Heels and was a sought after prospect
+    in the NFL Draft.
 </p>
 
-<hr> <h3>Picture 1: Game Day Focus</h3>
-<img src="DMpic2.webp" alt="Drake Maye in his UNC football jersey looking focused" width="450">
+<img src="DMpic1.jpeg" alt="Drake Maye in his football uniform" width="400">
+
+
+<h2>College Career Highlights</h2>
 <p>
-    This picture captures Drake Maye wearing his UNC Tar Heels jersey, helmet on, and looking focused on the field before a big play. It showcases his intensity as a competitor.
+    Maye had an incredible run at UNC, showcasing his strong arm and mobility.
+    He became known for his accurate passing and ability to extend plays outside the pocket.
 </p>
 
-<hr> <h3>Picture 2: The Throwing Motion</h3>
-<img src="DMpic3.avif" alt="Drake Maye throwing a football on the field" width="450">
+<h3>Key Statistics (UNC)</h3>
+<ul>
+    <li>Passing Yards: Over 8,000</li>
+    <li>Passing Touchdowns: Over 60</li>
+    <li>Key Award: 2022 ACC Player of the Year</li>
+</ul>
+
+<hr>
+
+<h2 id="facts">Fun Facts About Drake Maye</h2>
 <p>
-    Here, Maye is shown in the middle of his signature throwing motion. You can see his strong posture and the power he generates to launch the football down the field. This highlights his primary skill as a quarterback.
+    The Maye family has a deep history in UNC sports. Drake's father, Mark Maye, played quarterback for the Tar Heels,
+    and his brothers also excelled in basketball.
 </p>
 
-<hr> <h3>Picture 3: Off the Field - Professional Look</h3>
-<img src="DMpic4.webp" alt="Drake Maye wearing a suit and smiling" width="450">
-<p>
-    This final image shows a smiling Drake Maye dressed in a suit, likely taken during the NFL Draft or an awards ceremony. It shows his professional side and great personality.
-</p>
-
-
-
-
-
-
-<a href="https://people.com/all-about-ann-michael-hudson-drake-maye-wife-11824083" target="_blank">
-    <button>Check out Drake Maye's Highschool Sweetheart</button>
+<a href="https://www.espn.com/nfl/player/_/id/4844331/drake-maye" target="_blank">
+    <button>Check out Drake Maye's Stats on ESPN</button>
 </a>
 
+
+
 <script>
-    
+   
     const pageTitle = document.title;
     
    
@@ -63,7 +69,7 @@
             link.classList.add('active-page');
         }
     } 
-   
+    
     else if (pageTitle.includes("Gallery")) {
         const link = document.getElementById('nav-gallery');
         if (link) {
